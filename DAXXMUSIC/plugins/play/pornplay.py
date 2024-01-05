@@ -14,8 +14,8 @@ from pytgcalls.types import AudioVideoPiped
 
 keyboard = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"), 
-            InlineKeyboardButton("⊝ ᴠᴘʟᴀʏ⊝", callback_data="vplay_data"),
+            InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close_data"), 
+            InlineKeyboardButton("ᴠᴘʟᴀʏ", callback_data="vplay_data"),
         ]
 ])
 
