@@ -11,7 +11,7 @@ WEL_GIFS = [
 
 def create_close_button():
     return InlineKeyboardMarkup(
-        [[InlineKeyboardButton("๏ ᴄʟᴏsᴇ ๏", callback_data="close")]]
+        [[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")]]
     )
 
 @bot.on_message(filters.new_chat_members)
@@ -21,7 +21,7 @@ async def welcome(_, m: Message):
     
     await m.reply_animation(
         random_wel_gif,
-        caption=f"Hɪɪ ᴅᴇᴀʀ {m.from_user.mention}\Wᴇʟᴄᴏᴍᴇ ᴛᴏ {m.chat.title}!\n• Jᴏɪɴᴇᴅ ᴀᴛ: {join_date}\n┏━━━━━━━━━━━━━━━━━━━━┓\n• ꜰᴏʟʟᴏᴡ ᴏᴜʀ ʀᴜʟᴇꜱ ᴘʟᴇᴀꜱᴇ✨\n\n╚»『ᴅᴏɴ'ᴛ ᴜᴘʟᴏᴀᴅ 18+ ᴍᴀᴛᴇʀɪᴀʟ\n╚»『 ꜱᴘᴀᴍᴍɪɴɢ & ꜰɪɪɢʜᴛ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ✨\n╚»『 ᴏᴡɴᴇʀ - ꜱᴇᴄʀᴇᴛ\n╚»『 ɢɪʀʟꜱ ᴅᴍ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ\n╚» ᴏᴛʜᴇʀᴇ ᴡɪsᴇ ʏᴏᴜ ᴡɪʟʟ ɴᴇ ʙᴀɴᴇᴅ\n╚»『 ᴇɴᴊᴏʏ ᴏᴜʀ ɢʀᴏᴜᴘ\n┗━━━━━━━━━━━━━━━━━━━━",
+        caption=f"❀ ʜɪɪ {m.from_user.mention}, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ ! ❀\n๏ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ {m.chat.title} ɢʀᴏᴜᴘ\n๏ ᴊᴏɪɴᴇᴅ ᴅᴀᴛᴇ ➛ {join_date}\n┏━━━━━━━━━━━━━━━━━━━━┓\n๏ ꜰᴏʟʟᴏᴡ ᴏᴜʀ ʀᴜʟᴇꜱ ᴘʟᴇᴀꜱᴇ\n\n╚»『ᴅᴏɴ'ᴛ ᴜᴘʟᴏᴀᴅ 18+ ᴍᴀᴛᴇʀɪᴀʟ\n╚»『 ꜱᴘᴀᴍᴍɪɴɢ & ꜰɪɪɢʜᴛ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ\n╚»『 ᴏᴡɴᴇʀ ➛ ꜱᴇᴄʀᴇᴛ\n╚»『 ɢɪʀʟꜱ ᴅᴍ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ\n╚» ᴏᴛʜᴇʀᴇ ᴡɪsᴇ ʏᴏᴜ ᴡɪʟʟ ɴᴇ ʙᴀɴᴇᴅ\n╚»『 ᴇɴᴊᴏʏ ᴏᴜʀ ɢʀᴏᴜᴘ\n┗━━━━━━━━━━━━━━━━━━━━",
     )
 
 @bot.on_message(filters.left_chat_member)
@@ -29,6 +29,6 @@ async def member_has_left(_, m: Message):
     left_gif = "https://telegra.ph/file/d28047520fad932521368.mp4"
     await m.reply_animation(
         left_gif,
-        caption=f"Sᴀᴅ Tᴏ Sᴇᴇ Yᴏᴜ Lᴇᴀᴠɪɴɢ {m.from_user.mention}\nTᴀᴋᴇ Cᴀʀᴇ!\n",
+        caption=f"๏ sᴀᴅ ᴛᴏ sᴇᴇ ʏᴏᴜ ʟᴇᴀᴠɪɴɢ {m.from_user.mention}\n๏ ᴛᴀᴋᴇ ᴄᴀʀᴇ !\n",
         reply_markup=create_close_button()
     )
