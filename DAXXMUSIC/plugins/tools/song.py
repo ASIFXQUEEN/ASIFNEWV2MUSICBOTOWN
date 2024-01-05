@@ -11,10 +11,10 @@ from youtubesearchpython import VideosSearch
 
 @app.on_message(filters.command(["song"], ["/", "!", "."]))
 async def song(client: app, message: Message):
-    aux = await message.reply_text("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
+    aux = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ ...**")
     if len(message.command) < 2:
         return await aux.edit(
-            "**🤖 𝐆𝐢𝐯𝐞 🙃 𝐌𝐮𝐬𝐢𝐜 💿 𝐍𝐚𝐦𝐞 😍\n💞 𝐓𝐨 🔊 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 🥀 𝐒𝐨𝐧𝐠❗**"
+            "**ɢɪᴠᴇ ᴍᴜsɪᴄ ɴᴀᴍᴇ \n💞 ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ❗**"
         )
     try:
         song_name = message.text.split(None, 1)[1]
@@ -34,10 +34,10 @@ async def song(client: app, message: Message):
             ],
             "outtmpl": f"downloads/{song_title}",
         }
-        await aux.edit("**𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ...**")
+        await aux.edit("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download(song_link)
-        await aux.edit("**𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ...**")
+        await aux.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ...**")
         await message.reply_audio(f"downloads/{song_title}.mp3")
         try:
             os.remove(f"downloads/{song_title}.mp3")
@@ -75,7 +75,7 @@ async def download_instareels(c: app, m: Message):
                 await m.reply_document(Reel_)
                 return
             except Exception:
-                await m.reply_text("I am unable to reach to this reel.")
+                await m.reply_text("ɪ ᴀᴍ ᴜɴᴀʙʟᴇ ᴛᴏ ʀᴇᴀᴄʜ ᴛᴏ ᴛʜɪs ʀᴇᴇʟ.")
 
 
 
@@ -94,8 +94,9 @@ async def instagram_reel(client, message):
                 video_url = media_urls[0]['url']
                 await message.reply_video(f"{video_url}")
             else:
-                await message.reply("No video found in the response. may be accountbis private.")
+                await message.reply("ɴᴏ ᴠɪᴅᴇᴏ ғᴏᴜɴᴅ ɪɴ ᴛʜᴇ ʀᴇsᴘᴏɴsᴇ. ᴍᴀʏ ʙᴇ ᴀᴄᴄᴏᴜɴᴛʙɪs ᴘʀɪᴠᴀᴛᴇ.")
         else:
             await message.reply("Request was not successful.")
     else:
-        await message.reply("Please provide a valid Instagram URL using the /reels command.")
+        await message.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ɪɴsᴛᴀɢʀᴀᴍ ᴜʀʟ ᴜsɪɴɢ ᴛʜᴇ /reels ᴄᴏᴍᴍᴀɴᴅ.")
+        
