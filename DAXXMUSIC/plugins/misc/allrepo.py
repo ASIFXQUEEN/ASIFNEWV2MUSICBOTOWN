@@ -38,12 +38,13 @@ def get_all_repository_info(github_username):
 
     # Extract relevant information from the response
     repo_info = "\n\n".join([
-        f"Repository: {repo['full_name']}\n"
-        f"Description: {repo['description']}\n"
-        f"Stars: {repo['stargazers_count']}\n"
-        f"Forks: {repo['forks_count']}\n"
-        f"URL: {repo['html_url']}"
+        f"๏ ʀᴇᴘᴏsɪᴛᴏʀʏ ➛ {repo['full_name']}\n"
+        f"๏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➛ {repo['description']}\n"
+        f"๏ sᴛᴀʀs ➛ {repo['stargazers_count']}\n"
+        f"๏ ғᴏʀᴋs ➛ {repo['forks_count']}\n"
+        f"๏ ᴜʀʟ ➛ {repo['html_url']}"
         for repo in data
     ])
 
     return repo_info
+    
