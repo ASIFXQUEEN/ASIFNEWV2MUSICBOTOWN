@@ -10,7 +10,16 @@ import socket
 import aiofiles
 import aiohttp
 import asyncio
+from io import BytesIO
 
+async def make_carbon(code):
+    url = "https://carbonara.solopov.dev/api/cook"
+    async with aiohttp.ClientSession() as session:
+        async with session.post(url, json={"code": code}) as resp:
+            image = BytesIO(await resp.read())
+    image.name = "carbon.png"
+    return image
+    
 aiohttpsession = ClientSession()
 
 # Rest of your code remains unchanged...
@@ -51,29 +60,28 @@ async def isPreviewUp(preview: str) -> bool:
 @app.on_message(filters.command("paste"))
 async def paste_func(_, message):
     if not message.reply_to_message:
-        return await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ /paste")
-    m = await message.reply_text("ᴘᴀsᴛɪɴɢ...")
+        return await message.reply_text("**๏ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ /paste**")
+    m = await message.reply_text("**๏ ᴘᴀsᴛɪɴɢ ᴘʟs ᴡᴀɪᴛ 10 sᴇᴄ....**")
     if message.reply_to_message.text:
         content = str(message.reply_to_message.text)
     elif message.reply_to_message.document:
         document = message.reply_to_message.document
         if document.file_size > 1048576:
-            return await m.edit("ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ᴘᴀsᴛᴇ ғɪʟᴇs sᴍᴀʟʟᴇʀ ᴛʜᴀɴ 1ᴍʙ.")
+            return await m.edit("**๏ ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ᴘᴀsᴛᴇ ғɪʟᴇs sᴍᴀʟʟᴇʀ ᴛʜᴀɴ 1ᴍʙ.**")
         if not pattern.search(document.mime_type):
-            return await m.edit("ᴏɴʟʏ ᴛᴇxᴛ ғɪʟᴇs ᴄᴀɴ ʙᴇ ᴘᴀsᴛᴇᴅ.")
+            return await m.edit("**๏ ᴏɴʟʏ ᴛᴇxᴛ ғɪʟᴇs ᴄᴀɴ ʙᴇ ᴘᴀsᴛᴇᴅ.**")
         doc = await message.reply_to_message.download()
         async with aiofiles.open(doc, mode="r") as f:
             content = await f.read()
         os.remove(doc)
-    link = await paste(content)
-    preview = f"{link}/preview.png"
-    button = InlineKeyboard(row_width=1)
-    button.add(InlineKeyboardButton(text="ᴘᴀsᴛᴇ ʟɪɴᴋ", url=link))
-
-    if await isPreviewUp(preview):
-        try:
-            await message.reply_photo(photo=preview, quote=False, reply_markup=button)
-            return await m.delete()
-        except Exception:
-            pass
-    return await m.edit(link)
+        carbon = await make_carbon(content)
+        await m.delete()
+        text = await message.reply("**๏ ᴘᴀsᴛᴇᴅ ᴏɴ ᴄᴀʀʙᴏɴ ᴘᴀɢᴇ !**")
+        await asyncio.sleep(0.4)
+        await text.edit("**๏ ᴜᴘʟᴏᴀᴅɪɴɢ ᴜɴᴅᴇʀ 5 sᴇᴄ.**")
+        await asyncio.sleep(0.4)
+        await text.edit("**๏ ᴜᴘʟᴏᴀᴅɪɴɢ ᴜɴᴅᴇʀ 5 sᴇᴄ....**")
+        await message.reply_photo(carbon)
+        await text.delete()
+        carbon.close()
+    
