@@ -65,7 +65,7 @@ async def github(_, message):
                 pass
 
     # Create an inline keyboard with a close button
-    close_button = InlineKeyboardButton("Close", callback_data="close")
+    close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
     inline_keyboard = InlineKeyboardMarkup([[close_button]])
 
     # Send the message with the inline keyboard
