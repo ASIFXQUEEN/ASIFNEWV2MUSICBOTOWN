@@ -27,7 +27,7 @@ async def github(_, message):
     async with aiohttp.ClientSession() as session:
         async with session.get(URL) as request:
             if request.status == 404:
-                return await message.reply_text("404")
+                return await message.reply_text("ʟᴏᴅᴇ ɢɪᴛʜᴜʙ ᴜsᴇʀɴᴀᴍᴇ ᴠᴀʟɪᴅ ᴡᴀʟᴀ ᴅᴀᴀʟ.")
 
             result = await request.json()
 
