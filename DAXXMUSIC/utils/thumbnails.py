@@ -88,7 +88,7 @@ async def get_thumb(videoid):
         y2 = Ycenter + 250
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
-        logo = ImageOps.expand(logo, border=17, fill="pink")
+        logo = ImageOps.expand(logo, border=17, fill="green")
         background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
         
@@ -103,14 +103,14 @@ async def get_thumb(videoid):
         para = textwrap.wrap(clear(title), width=32) 
         j = 0
         draw.text(
-            (6, 6), f"{BOT_NAME}", fill="Yellow", font=name_font
+            (6, 6), f"{BOT_NAME}", fill="Blue", font=name_font
         )
         draw.text(
             (600, 200),
             f"NOW PLAYING",
             fill="white",
             stroke_width=2,
-            stroke_fill="yellow",
+            stroke_fill="green",
             font=font2,
         )
         for line in para:
@@ -121,7 +121,7 @@ async def get_thumb(videoid):
                     f"Tɪᴛʟᴇ : {line}",
                     fill="white",
                     stroke_width=1,
-                    stroke_fill="white",
+                    stroke_fill="blue",
                     font=font,
                 )
             if j == 0:
@@ -131,7 +131,7 @@ async def get_thumb(videoid):
                     f"{line}",
                     fill="white",
                     stroke_width=1,
-                    stroke_fill="white",
+                    stroke_fill="blue",
                     font=font,
                 )
 
@@ -140,7 +140,7 @@ async def get_thumb(videoid):
             f"Views : {views[:23]}",
             fill="white",
             stroke_width=1,
-            stroke_fill="white",
+            stroke_fill="blue",
             font=font,
         )
         draw.text(
@@ -148,7 +148,7 @@ async def get_thumb(videoid):
             f"Duration : {duration[:23]} Mins",
             fill="white",
             stroke_width=1,
-            stroke_fill="white",
+            stroke_fill="blue",
             font=font,
         )
         draw.text(
@@ -156,7 +156,7 @@ async def get_thumb(videoid):
             f"Channel : {channel}",
             fill="white",
             stroke_width=1,
-            stroke_fill="white",
+            stroke_fill="blue",
             font=font,
         )
         try:
