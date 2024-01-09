@@ -25,6 +25,11 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://sanasomani786:TJgADfpkI1XVU
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "10000"))
 
+# Duration Limit for downloading Songs in MP3 or MP4 format from bot
+SONG_DOWNLOAD_DURATION = int(
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "18000")
+)  # Remember to give value in Minutes
+
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001929735324"))
 
@@ -51,6 +56,11 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/the_friendz")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", "True"))
+
+# Time after which you're assistant account will leave chats automatically.
+AUTO_LEAVE_ASSISTANT_TIME = int(
+    getenv("ASSISTANT_LEAVE_TIME", "540000")
+)  # Remember to give value in Seconds
 
 
 # Get this credentials from https://developer.spotify.com/dashboard
