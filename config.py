@@ -55,7 +55,7 @@ SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/roy_editx")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/the_friendz")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", "True"))
+AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", "False"))
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
