@@ -59,7 +59,7 @@ AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", "False"))
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "540000")
+    getenv("ASSISTANT_LEAVE_TIME", "5400000")
 )  # Remember to give value in Seconds
 
 
