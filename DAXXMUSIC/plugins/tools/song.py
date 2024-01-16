@@ -1,52 +1,83 @@
 import os
+import future
 import asyncio
-import yt_dlp
 import requests
+import wget
+import time
+import yt_dlp
+from urllib.parse import urlparse
+from youtube_search import YoutubeSearch
+from yt_dlp import YoutubeDL
 
-from ... import app
+from DAXXMUSIC import app
 from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
 from youtubesearchpython import VideosSearch
+from youtubesearchpython import SearchVideos
 
 
-@app.on_message(filters.command(["song"], ["/", "!", "."]))
-async def song(client: app, message: Message):
-    aux = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ ...**")
-    if len(message.command) < 2:
-        return await aux.edit(
-            "**ɢɪᴠᴇ ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ...**"
-        )
+
+
+# ------------------------------------------------------------------------------- #
+
+@app.on_message(filters.command("song"))
+def download_song(_, message):
+    query = " ".join(message.command[1:])  
+    print(query)
+    m = message.reply("**🔄 sᴇᴀʀᴄʜɪɴɢ... **")
+    ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
-        song_name = message.text.split(None, 1)[1]
-        vid = VideosSearch(song_name, limit = 1)
-        song_title = vid.result()["result"][0]["title"]
-        song_link = vid.result()["result"][0]["link"]
-        ydl_opts = {
-            "format": "mp3/bestaudio/best",
-            "verbose": True,
-            "geo-bypass": True,
-            "nocheckcertificate": True,
-            "postprocessors": [
-                {
-                    "key": "FFmpegExtractAudio",
-                    "preferredcodec": "mp3"
-                }
-            ],
-            "outtmpl": f"downloads/{song_title}",
-        }
-        await aux.edit("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**")
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download(song_link)
-        await aux.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ...**")
-        await message.reply_audio(f"downloads/{song_title}.mp3")
-        try:
-            os.remove(f"downloads/{song_title}.mp3")
-        except:
-            pass
-        await aux.delete()
-    except Exception as e:
-        await aux.edit(f"**Error:** {e}")
+        results = YoutubeSearch(query, max_results=1).to_dict()
+        link = f"https://youtube.com{results[0]['url_suffix']}"
+        title = results[0]["title"][:40]
+        thumbnail = results[0]["thumbnails"][0]
+        thumb_name = f"{title}.jpg"
+        thumb = requests.get(thumbnail, allow_redirects=True)
+        open(thumb_name, "wb").write(thumb.content)
+        duration = results[0]["duration"]
 
+        # Add these lines to define views and channel_name
+        views = results[0]["views"]
+        channel_name = results[0]["channel"]
+
+    except Exception as e:
+        m.edit("**⚠️ ɴᴏ ʀᴇsᴜʟᴛs ᴡᴇʀᴇ ғᴏᴜɴᴅ. ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ᴛʏᴘᴇᴅ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ sᴏɴɢ ɴᴀᴍᴇ**")
+        print(str(e))
+        return
+    m.edit("**📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**")
+    try:
+        with yt_dlp.YoutubeDL(ydl_ops) as ydl:
+            info_dict = ydl.extract_info(link, download=False)
+            audio_file = ydl.prepare_filename(info_dict)
+            ydl.process_info(info_dict)
+        secmul, dur, dur_arr = 1, 0, duration.split(":")
+        for i in range(len(dur_arr) - 1, -1, -1):
+            dur += int(float(dur_arr[i])) * secmul
+            secmul *= 60
+        m.edit("**📤 ᴜᴘʟᴏᴀᴅɪɴɢ...**")
+
+        message.reply_audio(
+            audio_file,
+            thumb=thumb_name,
+            title=title,
+            caption=f"{title}\nRᴇǫᴜᴇsᴛᴇᴅ ʙʏ ➪{message.from_user.mention}\nVɪᴇᴡs➪ {views}\nCʜᴀɴɴᴇʟ➪ {channel_name}",
+            duration=dur
+        )
+        m.delete()
+    except Exception as e:
+        m.edit(" - An error !!")
+        print(e)
+
+    try:
+        os.remove(audio_file)
+        os.remove(thumb_name)
+    except Exception as e:
+        print(e)
+        
+        
+
+# ------------------------------------------------------------------------------- #
 
 ###### INSTAGRAM REELS DOWNLOAD
 
@@ -75,7 +106,7 @@ async def download_instareels(c: app, m: Message):
                 await m.reply_document(Reel_)
                 return
             except Exception:
-                await m.reply_text("ɪ ᴀᴍ ᴜɴᴀʙʟᴇ ᴛᴏ ʀᴇᴀᴄʜ ᴛᴏ ᴛʜɪs ʀᴇᴇʟ.")
+                await m.reply_text("I am unable to reach to this reel.")
 
 
 
@@ -94,9 +125,8 @@ async def instagram_reel(client, message):
                 video_url = media_urls[0]['url']
                 await message.reply_video(f"{video_url}")
             else:
-                await message.reply("ɴᴏ ᴠɪᴅᴇᴏ ғᴏᴜɴᴅ ɪɴ ᴛʜᴇ ʀᴇsᴘᴏɴsᴇ. ᴍᴀʏ ʙᴇ ᴀᴄᴄᴏᴜɴᴛʙɪs ᴘʀɪᴠᴀᴛᴇ.")
+                await message.reply("No video found in the response. may be accountbis private.")
         else:
             await message.reply("Request was not successful.")
     else:
-        await message.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ɪɴsᴛᴀɢʀᴀᴍ ᴜʀʟ ᴜsɪɴɢ ᴛʜᴇ /reels ᴄᴏᴍᴍᴀɴᴅ.")
-        
+        await message.reply("Please provide a valid Instagram URL using the /reels command.")
