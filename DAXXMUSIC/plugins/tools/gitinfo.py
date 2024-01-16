@@ -1,17 +1,18 @@
 import asyncio, os, time, aiohttp
 import aiohttp
 from pyrogram import filters
-from blackpink import blackpink as bp
+from daxxhub import daxxhub as papadaxx
 from DAXXMUSIC import app
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 ###
 @app.on_message(filters.command("blackpink"))
-async def blackpink(_, message):
-    text = message.text[len("/blackpink ") :]
-    bp(f"{text}").save(f"blackpink_{message.from_user.id}.png")
-    await message.reply_photo(f"blackpink_{message.from_user.id}.png")
-    os.remove(f"blackpink_{message.from_user.id}.png")
+async def daxxhub(_, message):
+    text = message.text[len("/daxxhub") :]
+    papadaxx(f"{text}").save(f"daxxhub_{message.from_user.id}.png")
+    await message.reply_photo(f"daxxhub_{message.from_user.id}.png")
+    os.remove(f"daxxhub_{message.from_user.id}.png")
+
 
 ####
 
