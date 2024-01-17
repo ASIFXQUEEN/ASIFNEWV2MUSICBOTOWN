@@ -28,9 +28,9 @@ from strings import get_string
 
 
 YUMI_PICS = [
-"https://telegra.ph/file/7611ad355da9de11423e8.jpg",
-"https://telegra.ph/file/1166532656cd26238c94b.jpg",
-"https://telegra.ph/file/57c386813a1a26746479d.jpg",
+"https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
+"https://telegra.ph/file/8134fa7931e35ba24f721.jpg",
+"https://telegra.ph/file/daaee7888bda72ed29dba.jpg",
 "https://telegra.ph/file/c41810d3f632921d00b43.jpg",
 "https://telegra.ph/file/b912059691f481b8b3439.jpg",
 "https://telegra.ph/file/5aad0a2c595547cfbd59a.jpg",
@@ -60,6 +60,7 @@ async def start_pm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
+            await message.reply_sticker("CAACAgUAAxkBAAELM2xlp7Oi0Ran9YW38KN00-_5ATFsCwAC0AQAAu7WCVQIPizXMhbauzQE")
             return await message.reply_photo(
                 random.choice(YUMI_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
