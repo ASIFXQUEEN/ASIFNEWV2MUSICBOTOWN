@@ -95,7 +95,7 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg"
+    "START_IMG_URL", "https://radare.arzfun.com/api/tg/photo?id=AgACAgUAAxkBAAIM_GWnk-M0fmjxeKC3Mz_Ix2W3X8j9AALAuTEbPqZBVVv57NW85X8BAQADAgADeAADNAQ"
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg"
