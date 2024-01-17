@@ -69,14 +69,14 @@ def stream_markup_timer(_, chat_id, played, dur):
                  [
             InlineKeyboardButton(
 
-                text="⚛ʟɪꜰᴇ⚛",
+                text="✪ʟɪꜰᴇ✪",
 
                 url=f"https://t.me/BESTODISHA",
 
             ),
             InlineKeyboardButton(
 
-                text="⚛ᴊᴀɴɴ⚛",
+                text="✪ᴊᴀɴɴ✪",
 
                 url=f"https://t.me/ARAME9",
 
@@ -86,7 +86,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                  [
             InlineKeyboardButton(
 
-                text="⚛ᴏᴡɴᴇʀ⚛",
+                text="✪ᴏᴡɴᴇʀ✪",
 
                 url=f"t.me/{OWNER_USERNAME}",
 
@@ -109,14 +109,14 @@ def stream_markup(_, chat_id):
                  [
             InlineKeyboardButton(
 
-                text="⚛ʟɪꜰᴇ⚛",
+                text="✪ʟɪꜰᴇ✪",
 
                 url=f"https://t.me/BESTODISHA",
 
             ),
             InlineKeyboardButton(
 
-                text="⚛ᴊᴀɴɴ⚛",
+                text="✪ᴊᴀɴɴ✪",
 
                 url=f"https://t.me/ARAME9",
 
@@ -126,7 +126,7 @@ def stream_markup(_, chat_id):
                  [
             InlineKeyboardButton(
 
-                text="⚛ᴏᴡɴᴇʀ⚛",
+                text="✪ᴏᴡɴᴇʀ✪",
 
                 url=f"t.me/{OWNER_USERNAME}",
 
