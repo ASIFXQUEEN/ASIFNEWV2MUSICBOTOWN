@@ -36,7 +36,7 @@ async def _whisper(_, inline_query):
         except:
             mm = [
                 InlineQueryResultArticle(
-                    title="💌 ᴡʜɪsᴘᴇʀ",
+                    title="🕊️ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ 🕊️",
                     description="๏ʏᴇ ᴅᴜɴɪʏᴀ ᴍᴇ ɴᴀʜɪ ʜᴀɪ !",
                     input_message_content=InputTextMessageContent("๏ ɪɴᴠᴀʟɪᴅ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ!"),
                     thumb_url="https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
@@ -45,7 +45,7 @@ async def _whisper(_, inline_query):
             ]
         
         try:
-            whisper_btn = InlineKeyboardMarkup([[InlineKeyboardButton("💌 sʜᴏᴡ ᴍᴇssᴀɢᴇ", callback_data=f"fdaywhisper_{inline_query.from_user.id}_{user.id}")]])
+            whisper_btn = InlineKeyboardMarkup([[InlineKeyboardButton("❤️ᴛᴜᴍʜᴀʀᴇʟɪʏᴇ❤️", callback_data=f"fdaywhisper_{inline_query.from_user.id}_{user.id}")]])
             one_time_whisper_btn = InlineKeyboardMarkup([[InlineKeyboardButton("🍄 ᴏɴᴇ-ᴛɪᴍᴇ ᴡʜɪsᴘᴇʀ", callback_data=f"fdaywhisper_{inline_query.from_user.id}_{user.id}_one")]])
             mm = [
                 InlineQueryResultArticle(
@@ -111,8 +111,8 @@ async def in_help():
         InlineQueryResultArticle(
             title="💌 ᴡʜɪsᴘᴇʀ",
             description=f"@NAXQUEEN_BOT [USERNAME | ID] [TEXT]",
-            input_message_content=InputTextMessageContent(f"**๏ ᴜsᴀɢᴇ ➠**\n\n@NykaaXbot (ᴛᴀʀɢᴇᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ) (ʏᴏᴜʀ ᴍᴇssᴀɢᴇ).\n\n**๏ ᴇxᴀᴍᴘʟᴇ ➠**\n@ASHIF903 @username Qᴜᴇᴇɴ ᴋᴀʜᴜᴛʜɪʟᴀ ᴋɪ ᴛᴜ ᴛᴀᴋᴜ ꜱᴏᴅɪʟᴜ"),
-            thumb_url="https://telegra.ph/file/21c69049c4855ac0a035b.jpg",
+            input_message_content=InputTextMessageContent(f"**๏ ᴜsᴀɢᴇ ➠**\n\n@ASHIF903 (ᴛᴀʀɢᴇᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ) (ʏᴏᴜʀ ᴍᴇssᴀɢᴇ).\n\n**๏ ᴇxᴀᴍᴘʟᴇ ➠**\n@ASHIF903 @username Qᴜᴇᴇɴ ᴋᴀʜᴜᴛʜɪʟᴀ ᴋɪ ᴛᴜ ᴛᴀᴋᴜ ꜱᴏᴅɪʟᴜ"),
+            thumb_url="https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
             reply_markup=switch_btn
         )
     ]
