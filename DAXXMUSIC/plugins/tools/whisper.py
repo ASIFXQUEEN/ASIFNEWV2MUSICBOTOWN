@@ -8,7 +8,7 @@ from pyrogram.types import (
 
 whisper_db = {}
 
-switch_btn = InlineKeyboardMarkup([[InlineKeyboardButton("💌 sᴛᴀʀᴛ ᴡʜɪsᴘᴇʀ", switch_inline_query_current_chat="")]])
+switch_btn = InlineKeyboardMarkup([[InlineKeyboardButton("🕊️ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ 🕊️", switch_inline_query_current_chat="")]])
 
 async def _whisper(_, inline_query):
     data = inline_query.query
@@ -17,10 +17,10 @@ async def _whisper(_, inline_query):
     if len(data.split()) < 2:
         mm = [
             InlineQueryResultArticle(
-                title="💌 ᴡʜɪsᴘᴇʀ",
+                title="🕊️ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ 🕊️",
                 description=f"@{BOT_USERNAME} [ USERNAME | ID ] [ TEXT ]",
                 input_message_content=InputTextMessageContent(f"💌 ᴜsᴀɢᴇ ➠ \n\n@{BOT_USERNAME} [ USERNAME | ID ] [ TEXT ]"),
-                thumb_url="https://telegra.ph/file/21c69049c4855ac0a035b.jpg",
+                thumb_url="https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
                 reply_markup=switch_btn
             )
         ]
@@ -37,9 +37,9 @@ async def _whisper(_, inline_query):
             mm = [
                 InlineQueryResultArticle(
                     title="💌 ᴡʜɪsᴘᴇʀ",
-                    description="๏ ɪɴᴠᴀʟɪᴅ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ !",
+                    description="๏ʏᴇ ᴅᴜɴɪʏᴀ ᴍᴇ ɴᴀʜɪ ʜᴀɪ !",
                     input_message_content=InputTextMessageContent("๏ ɪɴᴠᴀʟɪᴅ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ!"),
-                    thumb_url="https://telegra.ph/file/21c69049c4855ac0a035b.jpg",
+                    thumb_url="https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
                     reply_markup=switch_btn
                 )
             ]
@@ -49,17 +49,17 @@ async def _whisper(_, inline_query):
             one_time_whisper_btn = InlineKeyboardMarkup([[InlineKeyboardButton("🍄 ᴏɴᴇ-ᴛɪᴍᴇ ᴡʜɪsᴘᴇʀ", callback_data=f"fdaywhisper_{inline_query.from_user.id}_{user.id}_one")]])
             mm = [
                 InlineQueryResultArticle(
-                    title="💌 ᴡʜɪsᴘᴇʀ",
+                    title="🕊️ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ 🕊️",
                     description=f"Send a Whisper to {user.first_name}!",
-                    input_message_content=InputTextMessageContent(f"💌 ᴀ ᴡʜɪsᴘᴇʀ ᴍᴇssᴀɢᴇ ᴛᴏ {user.first_name} ᴏɴʟʏ ʜᴇ/sʜᴇ ᴄᴀɴ ᴏᴘᴇɴ ɪᴛ.\n\n๏ ᴛʏᴘᴇ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ/sᴇɴᴛᴇɴᴄᴇ."),
-                    thumb_url="https://telegra.ph/file/21c69049c4855ac0a035b.jpg",
+                    input_message_content=InputTextMessageContent(f"💌 ᴀ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ ᴍᴇssᴀɢᴇ ᴛᴏ {user.first_name} ᴏɴʟʏ ʜᴇ/sʜᴇ ᴄᴀɴ ᴏᴘᴇɴ ɪᴛ.\n\n๏ ᴛʏᴘᴇ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ/sᴇɴᴛᴇɴᴄᴇ."),
+                    thumb_url="https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
                     reply_markup=whisper_btn
                 ),
                 InlineQueryResultArticle(
-                    title="💌 ᴏɴᴇ-ᴛɪᴍᴇ ᴡʜɪsᴘᴇʀ",
-                    description=f"๏ sᴇɴᴅ ᴀ ᴏɴᴇ-ᴛɪᴍᴇ ᴡʜɪsᴘᴇʀ ᴛᴏ {user.first_name}!",
+                    title="💌 ᴏɴᴇ-ᴛɪᴍᴇ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ",
+                    description=f"๏ sᴇɴᴅ ᴀ ᴏɴᴇ-ᴛɪᴍᴇ ʟᴏᴠᴇ ʟᴀᴛᴛᴇʀ  ᴛᴏ {user.first_name}!",
                     input_message_content=InputTextMessageContent(f"🍄 ʏᴏᴜ ᴀʀᴇ sᴇɴᴅɪɴɢ ᴀ ᴏɴᴇ-ᴛɪᴍᴇ ᴡʜɪsᴘᴇʀ ᴛᴏ {user.first_name} ᴏɴʟʏ ʜᴇ/sʜᴇ ᴄᴀɴ ᴏᴘᴇɴ ɪᴛ.\n\n๏ ᴛʏᴘᴇ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ/sᴇɴᴛᴇɴᴄᴇ."),
-                    thumb_url="https://telegra.ph/file/21c69049c4855ac0a035b.jpg",
+                    thumb_url="https://telegra.ph/file/0ad30bd8346bb58fe6d58.jpg",
                     reply_markup=one_time_whisper_btn
                 )
             ]
@@ -88,7 +88,7 @@ async def whispes_cb(_, query):
         except Unauthorized:
             pass
         
-        return await query.answer("๏ ᴛʜɪs ᴡʜɪsᴘᴇʀ ɪs ɴᴏᴛ ғᴏʀ ʏᴏᴜ 🚧", show_alert=True)
+        return await query.answer("ᴋʏᴀ ᴅᴇᴋʜ ʀᴀʜᴀ ʜᴀɪ ? 🚧", show_alert=True)
     
     search_msg = f"{from_user}_{to_user}"
     
@@ -111,7 +111,7 @@ async def in_help():
         InlineQueryResultArticle(
             title="💌 ᴡʜɪsᴘᴇʀ",
             description=f"@NykaaXbot [USERNAME | ID] [TEXT]",
-            input_message_content=InputTextMessageContent(f"**๏ ᴜsᴀɢᴇ ➠**\n\n@NykaaXbot (ᴛᴀʀɢᴇᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ) (ʏᴏᴜʀ ᴍᴇssᴀɢᴇ).\n\n**๏ ᴇxᴀᴍᴘʟᴇ ➠**\n@NykaaxBot @username ɪ ᴡᴀɴɴᴀ ғᴜᴄᴋ ʏᴏᴜ"),
+            input_message_content=InputTextMessageContent(f"**๏ ᴜsᴀɢᴇ ➠**\n\n@NykaaXbot (ᴛᴀʀɢᴇᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ) (ʏᴏᴜʀ ᴍᴇssᴀɢᴇ).\n\n**๏ ᴇxᴀᴍᴘʟᴇ ➠**\n@ASHIF903 @username Qᴜᴇᴇɴ ᴋᴀʜᴜᴛʜɪʟᴀ ᴋɪ ᴛᴜ ᴛᴀᴋᴜ ꜱᴏᴅɪʟᴜ"),
             thumb_url="https://telegra.ph/file/21c69049c4855ac0a035b.jpg",
             reply_markup=switch_btn
         )
