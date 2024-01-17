@@ -40,7 +40,7 @@ async def init():
     await userbot.start()
     await DAXX.start()
     try:
-        await DAXX.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await DAXX.stream_call("https://graph.org/file/508f32ed5827fd0159266.mp4")
     except NoActiveGroupCall:
         LOGGER("DAXXMUSIC").error(
             "𝗠𝗮𝗱𝗿𝗰𝗵𝗼𝗱 𝗽𝗲𝗵𝗲𝗹𝗲 𝘃𝗰 𝗼𝗻 𝗸𝗮𝗿 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗔𝗦𝗛𝗜𝗙 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
