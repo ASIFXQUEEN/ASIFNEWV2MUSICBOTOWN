@@ -27,7 +27,7 @@ async def gen_cc(client, message):
 `{cards[6]}`\n`{cards[7]}`\n`{cards[8]}`
 `{cards[9]}`
 **๏ 💳 ʙɪɴ ➛** `{resp.results[0].bin}`
-**๏ ⏳ ᴛɪᴍᴇ ᴛᴏᴏᴋ ➛** `{resp.took}`\n\n๏ ᴄᴄ ɢᴇɴ ʙʏ ➛ @NYKAAXBOT"""
+**๏ ⏳ ᴛɪᴍᴇ ᴛᴏᴏᴋ ➛** `{resp.took}`\n\n๏ ᴄᴄ ɢᴇɴ ʙʏ ➛ @ASHIF903"""
         )
     except Exception as e:
         return await aux.edit(f"**ᴇʀʀᴏʀ ➛** `{e}`")
