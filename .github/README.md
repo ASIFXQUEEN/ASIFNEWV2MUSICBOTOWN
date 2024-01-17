@@ -32,7 +32,7 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?color=white&width=420&lines=💥+ɪғ+ᴀɴʏ+ᴇʀʀᴏʀ+ᴛʜᴇɴ+sᴇɴᴅ+ᴍᴇ+ᴇʀʀᴏʀ+ɪɴ+ʀᴏʏ+ᴇᴅɪᴛx+...">
 <p align="center">
-<a href="https://telegram.me/THE_Friendz"><img src="https://img.shields.io/badge/-๛DM TO RoY EdiTX%20☆-FF00FF.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/ARAME9"><img src="https://img.shields.io/badge/-๛DM TO RoY EdiTX%20☆-FF00FF.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʟᴏᴄᴀʟ ʜᴏsᴛ/ ᴠᴘs 」─
