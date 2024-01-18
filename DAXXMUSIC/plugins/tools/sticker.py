@@ -30,7 +30,7 @@ async def upscale_image(client, message):
                 "https://api.qewertyy.me/upscale", data={"image_data": b}, timeout=None
             )
 
-        with open("upscaled_image.png", "wb") as output_file:
+        with open("cute_waliqueen.png", "wb") as output_file:
             output_file.write(response.content)
 
         await client.send_document(
@@ -40,7 +40,7 @@ async def upscale_image(client, message):
         )
 
     except Exception as e:
-        print(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ**: {e}")
+        print(f"**ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴘᴏ ᴋᴇ ꜱᴀᴀᴛʜ ᴜᴛᴘᴀᴛɴɢ ʜᴀʀᴋᴀᴛ ᴍᴀᴛ ᴋᴀʀᴏ ʏᴀʀʀ**: {e}")
         await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴄᴜᴛᴇᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**.")
 
 ######### sticker id
