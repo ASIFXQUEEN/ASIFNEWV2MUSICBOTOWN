@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 async def upscale_image(client, message):
     try:
         if not message.reply_to_message or not message.reply_to_message.photo:
-            await message.reply_text("**ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ɪᴛ.**")
+            await message.reply_text("**ʀᴀᴍᴅɪ ᴇᴋ ᴘʜᴏᴛᴏ ᴋᴏ ʀᴇᴘʟʏ ᴅᴇᴋᴇ ʟᴇᴋʜ ᴊɪꜱᴋᴏ ꜱᴇxʏ ʙᴀɴᴀ ɴᴀ ᴄʜᴀʜᴀᴛᴀ ʜᴀɪ.**")
             return
 
         image = message.reply_to_message.photo.file_id
@@ -35,13 +35,13 @@ async def upscale_image(client, message):
 
         await client.send_document(
             message.chat.id,
-            document="upscaled_image.png",
-            caption="**๏ ʜᴇʀᴇ ɪs ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ!**",
+            document="cute_waliqueen.png",
+            caption="**๏ ᴛᴜᴊʜᴇ ᴋᴇʜᴇɴᴀ ᴛᴏ ɴᴀʜɪ ᴄʜᴀʜɪʏᴇ ꜱʀʏ ɪɴᴛᴇᴢᴀʀ ᴋᴀʀᴀᴡᴀɴᴇᴋᴇʟɪʏᴇ**",
         )
 
     except Exception as e:
         print(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ**: {e}")
-        await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**.")
+        await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴄᴜᴛᴇᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**.")
 
 ######### sticker id
 
