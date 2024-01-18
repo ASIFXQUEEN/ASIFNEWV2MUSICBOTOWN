@@ -8,7 +8,7 @@ from pyrogram.types import InputMediaPhoto
 def ul(_, message):
     reply = message.reply_to_message
     if reply.media:
-        i = message.reply("๏ ᴍᴀᴋᴇ ᴀ ʟɪɴᴋ...")
+        i = message.reply("๏ ᴍɪꜱꜱ Qᴜᴇᴇɴ ᴀᴊᴀᴏ ʙʜɪ...")
         path = reply.download()
         fk = upload_file(path)
         for x in fk:
@@ -22,7 +22,7 @@ def ul(_, message):
 def ul(_, message):
     reply = message.reply_to_message
     if reply.media:
-        i = message.reply("๏ ᴍᴀᴋᴇ ᴀ ʟɪɴᴋ...")
+        i = message.reply("๏ ᴍɪꜱꜱ Qᴜᴇᴇɴ ᴀᴊᴀᴏ ʙʜɪ...")
         path = reply.download()
         fk = upload_file(path)
         for x in fk:
