@@ -32,7 +32,7 @@ def private_panel(_):
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_7"], url="https://graph.org/file/be002919600cab5688703.mp4"),
+            InlineKeyboardButton(text=_["S_B_7"], url="https://te.legra.ph/file/be002919600cab5688703.mp4"),
         ],    
         [
             InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper"),
