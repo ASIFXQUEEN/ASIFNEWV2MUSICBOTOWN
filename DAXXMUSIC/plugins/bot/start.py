@@ -29,17 +29,17 @@ from strings import get_string
 
 YUMI_PICS = [
 "https://telegra.ph/file/eb3d0c67ac1c3b04849a3.jpg",
-"https://radare.arzfun.com/api/tg/photo?id=AgACAgQAAxkBAAINnmWqI7u2v0U1dXOiHugkZ790F6TeAAIdwTEbbqNQUS_Nw4DzIUEVAQADAgADeQADNAQ",
-"https://radare.arzfun.com/api/tg/photo?id=AgACAgQAAxkBAAINnmWqI7u2v0U1dXOiHugkZ790F6TeAAIdwTEbbqNQUS_Nw4DzIUEVAQADAgADeQADNAQ",
-"https://telegra.ph/file/bcd8260e9a0b017c6093a.jpg",
-"https://telegra.ph/file/f34821eda0b7f6d6dd1e0.jpg",
-"https://telegra.ph/file/d2de9d8ae78ea6728a396.jpg",
-"https://telegra.ph/file/98f4a927d3ece2d533288.jpg",
-"https://telegra.ph/file/3a0193ab0784f4ea72e01.jpg",
-"https://telegra.ph/file/908acc43a5bc5efa3eb64.jpg",
-"https://telegra.ph/file/4da8c3c33986ddcf6b3bf.jpg",
-"https://telegra.ph/file/08d0607336afdd7cb657e.jpg",
-"https://telegra.ph/file/a3c08fe02de2e0a44cc38.jpg"
+"https://telegra.ph/file/0a08b180583f13952336a.jpg",
+"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
+"https://telegra.ph/file/bb0a28259990c6a978985.jpg",
+"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
+"https://telegra.ph/file/a0db46dfacd94e489117b.jpg",
+"https://telegra.ph/file/cd77be2595cdc2fca60a3.jpg",
+"https://telegra.ph/file/632724b3d30c691247c77.jpg",
+"https://telegra.ph/file/a2d01afe4f2cb1d4b650c.jpg",
+"https://telegra.ph/file/94dc035df11dfb159b999.jpg",
+"https://telegra.ph/file/fed9a5b1cbaaefc3a818c.jpg",
+"https://telegra.ph/file/66fd03632cbb38bdb4193.jpg"
 
 ]
 
@@ -105,7 +105,6 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
-        await message.reply_sticker("CAACAgQAAxkBAAIEyWWyNogdu4kSSaMlUs4jkHQGYcFTAALfEQACsxeIUXH3sCQvcQmlHgQ"),
         await message.reply_photo(
             random.choice(YUMI_PICS),
             caption=_["start_2"].format(message.from_user.mention, app.mention),
