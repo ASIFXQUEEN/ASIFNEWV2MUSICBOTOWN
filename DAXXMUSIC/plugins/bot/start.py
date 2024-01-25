@@ -116,8 +116,8 @@ async def start_pm(client, message: Message, _):
         served_users = len(await get_served_users())	
         UP, CPU, RAM, DISK = await bot_sys_stats()	
         await message.reply_sticker("CAACAgIAAxkBAAIFN2WyTFRbUAJe50AE40U3bMIS7Gj-AAIyAANkYXEufJi7Pr5eNa4eBA"),
-        await message.sleep(0.2)
-        await message.delete()
+        await asyncio.sleep(0.2)
+        await acha.delete()
         await message.reply_photo(	
             random.choice(YUMI_PICS),	
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),	
