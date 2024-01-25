@@ -28,9 +28,9 @@ from strings import get_string
 
 
 YUMI_PICS = [
-"https://telegra.ph/file/23f73435a6ecfd4672f7a.jpg",
-"https://telegra.ph/file/876d368cdbc7ff8ec9da1.jpg",
-"https://telegra.ph/file/e612d72e6c34169d25f0a.jpg",
+"https://telegra.ph/file/eb3d0c67ac1c3b04849a3.jpg",
+"https://radare.arzfun.com/api/tg/photo?id=AgACAgQAAxkBAAINnmWqI7u2v0U1dXOiHugkZ790F6TeAAIdwTEbbqNQUS_Nw4DzIUEVAQADAgADeQADNAQ",
+"https://radare.arzfun.com/api/tg/photo?id=AgACAgQAAxkBAAINnmWqI7u2v0U1dXOiHugkZ790F6TeAAIdwTEbbqNQUS_Nw4DzIUEVAQADAgADeQADNAQ",
 "https://telegra.ph/file/bcd8260e9a0b017c6093a.jpg",
 "https://telegra.ph/file/f34821eda0b7f6d6dd1e0.jpg",
 "https://telegra.ph/file/d2de9d8ae78ea6728a396.jpg",
