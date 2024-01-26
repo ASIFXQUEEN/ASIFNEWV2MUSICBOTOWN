@@ -6,6 +6,7 @@ from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     Message,
+    InputMediaVideo,
 )
 
 from DAXXMUSIC import app
