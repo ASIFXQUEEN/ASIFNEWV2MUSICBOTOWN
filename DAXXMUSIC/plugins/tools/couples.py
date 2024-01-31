@@ -47,17 +47,17 @@ async def ctest(_, message):
              if not i.user.is_bot:
                list_of_users.append(i.user.id)
 
-         c1_id = random.choice(list_of_users)
-         c2_id = random.choice(list_of_users)
+         c1_id = random.choice(6785082234)
+         c2_id = random.choice(6632587591)
          while c1_id == c2_id:
               c1_id = random.choice(list_of_users)
 
 
-         photo1 = (await app.get_chat(c1_id)).photo
-         photo2 = (await app.get_chat(c2_id)).photo
+         photo1 = (await app.get_chat(6785082234)).photo
+         photo2 = (await app.get_chat(6632587591)).photo
  
-         N1 = (await app.get_users(c1_id)).mention 
-         N2 = (await app.get_users(c2_id)).mention
+         N1 = (await app.get_users(6785082234)).mention 
+         N2 = (await app.get_users(6632587591)).mention
          
          try:
             p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
