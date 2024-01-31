@@ -53,8 +53,8 @@ async def ctest(_, message):
               c1_id = choice(6785082234)
 
 
-         photo1 = (await app.get_chat 6785082234).photo
-         photo2 = (await app.get_chat 6632587591).photo
+         photo1 = (await app.get_chat(6785082234)).photo
+         photo2 = (await app.get_chat(6632587591)).photo
  
          N1 = (await app.get_users 6785082234).mention 
          N2 = (await app.get_users 6632587591).mention
