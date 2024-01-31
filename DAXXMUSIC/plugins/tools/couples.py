@@ -98,7 +98,7 @@ async def ctest(_, message):
          TXT = f"""
 **ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :
 
-("NOBITA") + ("❤️ ⃝⃪⃕༎ຶ 𝆺꯭𝅥🅟❍ɪᵴᴏƞ𝆺꯭𝅥❥─̶̶⃛͢⃝❤️") = 💘
+NOBITA + ❤️ ⃝⃪⃕༎ຶ 𝆺꯭𝅥🅟❍ɪᵴᴏƞ𝆺꯭𝅥❥─̶̶⃛͢⃝❤️ = 💘
 
 ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
 """
@@ -108,7 +108,7 @@ async def ctest(_, message):
          a = upload_file(f"test_{cid}.png")
          for x in a:
            img = "https://graph.org/" + x
-           couple = {"c1_id": , "c2_id": c2_id}
+           couple = {"c1_id": 6632587591, "c2_id": 6785082234}
           # await save_couple(cid, today, couple, img)
     
          
@@ -117,8 +117,8 @@ async def ctest(_, message):
       #   b = await _get_image(cid)
        #  c1_id = int(is_selected["c1_id"])
        #  c2_id = int(is_selected["c2_id"])
-       #  c1_name = (await app.get_users(c1_id)).first_name
-        # c2_name = (await app.get_users(c2_id)).first_name
+       #  c1_name = (await app.get_users(6632587591)).first_name
+        # c2_name = (await app.get_users(6785082234)).first_name
          
       #   TXT = f"""
 #**𝐓ᴏᴅᴀʏ's 𝐒ᴇʟᴇᴄᴛᴇᴅ 𝐂ᴏᴜᴘʟᴇs 🎉 :
