@@ -16,7 +16,7 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from DAXXMUSIC import app
 from config import BOT_USERNAME
-from DAXXMUSIC.utils.errors import capture_err
+from DAXXMUSIC import capture_err
 
 from DAXXMUSIC.utils.files import (
     get_document_from_file_id,
