@@ -3,11 +3,11 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
-from FallenRobot import telethn as bot
-from FallenRobot.events import register
+from DAXXMUSIC import telethn as bot
+from DAXXMUSIC.events import register
 
 
-@register(pattern="^/mmf ?(.*)")
+@app.on_message(filters.command("mmf") & filters.reply)
 async def handler(event):
     if event.fwd_from:
         return
@@ -53,7 +53,7 @@ async def drawText(image_path, text):
         fnt = "ariel.ttf"
 
     else:
-        fnt = "./FallenRobot/resources/default.ttf"
+        fnt = "./DAXXMUSIC/assets/font2.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
