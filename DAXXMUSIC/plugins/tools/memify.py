@@ -9,13 +9,9 @@ from DAXXMUSIC import app
 
 
 @app.on_message(filters.command("mmf") & filters.reply)
-async def handler(event):
-    if event.fwd_from:
-        return
-
-    if not event.reply_to_msg_id:
-        await event.reply("Provide Some Text To Draw!")
-
+async def memify_handler(client: Client, message: Message):
+    if not message.reply_to_message or not message.reply_to_message.media:
+        await message.reply("Reply to an image/sticker.")
         return
 
     reply_message = await event.get_reply_message()
