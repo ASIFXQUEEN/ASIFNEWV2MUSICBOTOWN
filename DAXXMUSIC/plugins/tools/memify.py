@@ -1,10 +1,11 @@
 import os
 import textwrap
-
 from PIL import Image, ImageDraw, ImageFont
-
-from DAXXMUSIC import telethn as bot
-from DAXXMUSIC.events import register
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from pyrogram.raw.base import InputFile
+from io import BytesIO
+from DAXXMUSIC import app
 
 
 @app.on_message(filters.command("mmf") & filters.reply)
